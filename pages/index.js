@@ -24,7 +24,7 @@ export default function Home() {
                 <meta name="description" content="PitiClic offers educational games and educational software for PC, tablets, phones. Games and interactive applications for children of all ages." />
                 <meta name="keywords" content="educational games, educational software, educational games for PC, educational games for tablets, educational games for mobile, educational software for PC, educational software for tablets, educational software for mobile" />
                 <link href="http://www.piticlic.ro/en/" rel="canonical" />
-                <link href="http://www.piticlic.ro/ro/" rel="alternate" hreflang="ro-RO" />
+                <link href="http://www.piticlic.ro/ro/" rel="alternate" hrefLang="ro-RO" />
             </Head>
 
             <main>
@@ -33,89 +33,40 @@ export default function Home() {
                         <Image
                             src={topBarSvg}
                             alt="Follow us on Twitter"
-                            objectFit="contain"
-                            className={styles.nonSelectable}
-                            objectPosition="top"
-                            style={{
-                                width: "100%",
-                                height: "fit-content"
-                            }}
+                            className={`${styles.nonSelectable} ${styles.topBar}`}
                         />
                         <Link href="/">
                             <Image
                                 src={norHomePng}
                                 alt="Home"
-                                className={animation.scaleHoverEffect}
-                                style={{
-                                    position: 'absolute',
-                                    width: '14rem',
-                                    minWidth: '10%',
-                                    maxWidth: '20%',
-                                    top: '27%',
-                                    left: '4%',
-                                    zIndex: 2
-                                }}
+                                className={`${animation.scaleHoverEffect} ${styles.navButton} ${styles.homeImage}`}
                             />
                         </Link>
                         <Link href="/shop">
                             <Image
                                 src={norMagazinPng}
-                                className={animation.scaleHoverEffect}
                                 alt="Magazin"
-                                style={{
-                                    position: 'absolute',
-                                    width: '14rem',
-                                    minWidth: '10%',
-                                    maxWidth: '19%',
-                                    top: '26%',
-                                    left: '18.7%',
-                                    zIndex: 2
-                                }}
+                                className={`${animation.scaleHoverEffect} ${styles.navButton} ${styles.shopImage}`}
                             />
                         </Link>
                         <Link href={"/resources"}>
                             <Image
                                 src={norResursePng}
                                 alt="Resurse"
-                                className={animation.scaleHoverEffect}
-                                style={{
-                                    position: 'absolute',
-                                    width: '22rem',
-                                    top: '39%',
-                                    minWidth: '15%',
-                                    maxWidth: '25%',
-                                    left: '35%',
-                                    zIndex: 2
-                                }}
+                                className={`${animation.scaleHoverEffect} ${styles.navButton} ${styles.resourcesImage}`}
                             />
                         </Link>
                         <Link href="/contact">
                             <Image
                                 src={norContactPng}
-                                className={animation.scaleHoverEffect}
                                 alt="Contact"
-                                style={{
-                                    position: 'absolute',
-                                    maxWidth: '20%',
-                                    width: '14rem',
-                                    top: '73%',
-                                    minWidth: '10%',
-                                    left: '61%',
-                                    zIndex: 2
-                                }}
+                                className={`${animation.scaleHoverEffect} ${styles.navButton} ${styles.contactImage}`}
                             />
                         </Link>
                         <Image
                             src={soarePng}
                             alt="Soare"
-                            className={styles.nonSelectable + " " + animation.rotatingEffect}
-                            style={{
-                                position: 'absolute',
-                                width: '16%',
-                                top: '19%',
-                                left: '76%',
-                                zIndex: 2
-                            }}
+                            className={`${animation.scaleHoverEffect} ${animation.rotatingEffect} ${styles.navButton} ${styles.sunImage}`}
                         />
                     </div>
                     <div className={styles.heroContent}>

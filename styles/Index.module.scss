@@ -45,3 +45,53 @@
   -moz-user-select: none;
   -webkit-user-select: none;
 }
+
+.topBar {
+  object-fit: contain;
+  object-position: top;
+  width: 100%;
+  height: fit-content;
+}
+
+.navButton {
+  position: absolute;
+  z-index: 2;
+}
+
+.homeImage {
+  width: 13rem;
+  min-width: 10%;
+  max-width: 20%;
+  top: 27%;
+  left: 4%;
+}
+
+.shopImage {
+  width: 13rem;
+  min-width: 10%;
+  max-width: 19%;
+  top: 26%;
+  left: 18.7%;
+}
+
+.resourcesImage {
+  width: 21rem;
+  min-width: 15%;
+  max-width: 28%;
+  top: 39%;
+  left: 35%;
+}
+
+.contactImage {
+  width: 13rem;
+  min-width: 10%;
+  max-width: 20%;
+  top: 73%;
+  left: 61%;
+}
+
+.sunImage {
+  width: 16%;
+  top: 19%;
+  left: 76%;
+}
