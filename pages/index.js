@@ -48,9 +48,11 @@ export default function Home() {
                                 className={animation.scaleHoverEffect}
                                 style={{
                                     position: 'absolute',
-                                    width: '14%',
+                                    width: '14rem',
+                                    minWidth: '10%',
+                                    maxWidth: '20%',
                                     top: '27%',
-                                    left: '5%',
+                                    left: '4%',
                                     zIndex: 2
                                 }}
                             />
@@ -62,9 +64,11 @@ export default function Home() {
                                 alt="Magazin"
                                 style={{
                                     position: 'absolute',
-                                    width: '14%',
+                                    width: '14rem',
+                                    minWidth: '10%',
+                                    maxWidth: '19%',
                                     top: '26%',
-                                    left: '19.7%',
+                                    left: '18.7%',
                                     zIndex: 2
                                 }}
                             />
@@ -76,9 +80,11 @@ export default function Home() {
                                 className={animation.scaleHoverEffect}
                                 style={{
                                     position: 'absolute',
-                                    width: '22%',
+                                    width: '22rem',
                                     top: '39%',
-                                    left: '36%',
+                                    minWidth: '15%',
+                                    maxWidth: '25%',
+                                    left: '35%',
                                     zIndex: 2
                                 }}
                             />
@@ -90,9 +96,11 @@ export default function Home() {
                                 alt="Contact"
                                 style={{
                                     position: 'absolute',
-                                    width: '14%',
+                                    maxWidth: '20%',
+                                    width: '14rem',
                                     top: '73%',
-                                    left: '62%',
+                                    minWidth: '10%',
+                                    left: '61%',
                                     zIndex: 2
                                 }}
                             />
@@ -105,7 +113,7 @@ export default function Home() {
                                 position: 'absolute',
                                 width: '16%',
                                 top: '19%',
-                                left: '77%',
+                                left: '76%',
                                 zIndex: 2
                             }}
                         />
