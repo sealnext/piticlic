@@ -24,7 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 70%;
+  height: 100%;
   flex-direction: column;
 
   h1 {
@@ -94,4 +94,22 @@
   width: 16%;
   top: 19%;
   left: 76%;
+}
+
+.cdContainer {
+  margin-top: 3rem;
+}
+
+.cdImage {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 9rem;
+  min-width: 6%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  max-width: 100%;
+}
+
+.cdImage:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
