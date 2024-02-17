@@ -1,11 +1,22 @@
 /* font-family: var(--odor-font); */
 /* font-family: var(--noteworthy-font); */
 
+@media (max-width: 768px) {
+  body {
+    background-color: #b4c1ac;
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    background-color: #536B5A;
+  }
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #536B5A;
   font-family:
     Inter,
     -apple-system,
