@@ -155,10 +155,14 @@
   }
 
   .balloonImage {
-    left: 38%;
+    left: 50%;
     bottom: -5rem;
     top: unset;
     right: unset;
+  }
+
+  .balloonImageSrc {
+    transform: translateX(-50%);
   }
 
   .heroContent {

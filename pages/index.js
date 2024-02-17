@@ -18,6 +18,20 @@ import cd2Png from '../public/index/cd2.png';
 import pitiseniorPng from '../public/index/pitisenior.png';
 import balonPng from '../public/index/ballon_text.webp';
 
+const TopBar = ({ className }) => (
+    <svg
+        className={className}
+        width="1280"
+        height="130"
+        viewBox="0 0 1280 130"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path fillRule="evenodd" clipRule="evenodd" d="M0 84.0657L53.3333 78.4613C106.667 72.8569 213.333 61.6482 320 64.4503C426.667 67.2525 533.333 84.0657 640 100.879C746.667 117.692 853.333 134.505 960 128.901C1066.67 123.296 1173.33 95.2744 1226.67 81.2635L1280 67.2525V0H1226.67C1173.33 0 1066.67 0 960 0C853.333 0 746.667 0 640 0C533.333 0 426.667 0 320 0C213.333 0 106.667 0 53.3333 0H0V84.0657Z" fill="#536B5A" />
+    </svg>
+);
+
+
 export default function Home() {
     return (
         <div>
@@ -47,9 +61,7 @@ export default function Home() {
             <main>
                 <div className={styles.heroBackground}>
                     <div className={styles.header}>
-                        <Image
-                            src={topBarSvg}
-                            alt="topbar"
+                        <TopBar
                             className={`${styles.nonSelectable} ${styles.topBar}`}
                         />
                         <div className={`${styles.homeButtonContainer}`}>
@@ -115,7 +127,7 @@ export default function Home() {
                         <Image
                             src={balonPng}
                             alt="balloon"
-                            className={`${animation.ballonScaleHoverEffect}`}
+                            className={`${animation.ballonScaleHoverEffect} ${styles.balloonImageSrc}`}
                         />
                     </div>
                 </div>
