@@ -57,3 +57,7 @@ h2 {
   font-family: var(--noteworthy-font);
   margin: 0;
 }
+
+.noScroll {
+  overflow: hidden;
+}
