@@ -3,7 +3,7 @@
 
 .heroBackground {
   background-color: #000;
-  background-image: url("/index/landing+2.webp");
+  background-image: url("/index/landing-desktop.webp");
   background-size: cover;
   background-position: left top;
   background-repeat: no-repeat;
@@ -103,11 +103,11 @@
 }
 
 .resourcesImage {
-  width: 21rem;
+  width: 18rem;
   min-width: 15%;
   max-width: 28%;
   top: 39%;
-  left: 35%;
+  left: 35.7%;
 }
 
 .contactImage {
@@ -193,7 +193,6 @@
     top: 224px;
     right: 10px;
     left: unset;
-    width: 17rem;
     max-width: 75%;
   }
 
@@ -202,7 +201,7 @@
   }
 
   .heroBackground {
-    background-image: url("/index/landing-mobile.png");
+    background-image: url("/index/landing-mobile.webp");
   }
 
   .topBar {

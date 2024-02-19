@@ -8,7 +8,7 @@ import animation from '../styles/animations.module.scss';
 
 import norHomePng from '../public/index/nor-acasa.png';
 import norMagazinPng from '../public/index/nor-magazin.png';
-import norResursePng from '../public/index/nor-gratuit.png';
+import norResursePng from '../public/index/nor-gratuit.webp';
 import norContactPng from '../public/index/nor-contact.png';
 import soarePng from '../public/index/soare.png';
 import pitiseniorPng from '../public/index/pitisenior.png';
