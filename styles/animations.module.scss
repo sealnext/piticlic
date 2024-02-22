@@ -63,3 +63,28 @@
 .floatingEffect {
   animation: floatAnimation 6s infinite alternate ease-in-out;
 }
+
+@keyframes floatInWaterAnimation {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(5px) rotate(2deg);
+  }
+  75% {
+    transform: translateY(-3px) rotate(-1deg);
+  }
+}
+
+.floatInWaterEffect {
+  position: relative;
+  top: 28%;
+  display: flex;
+  transform: translate(-50%);
+  justify-content: center;
+  animation: floatInWaterAnimation 4s ease-in-out infinite;
+}

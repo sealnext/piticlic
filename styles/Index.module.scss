@@ -1,14 +1,84 @@
-/* font-family: var(--odor-font); */
-/* font-family: var(--noteworthy-font); */
-
 .heroBackground {
-  background-color: #000;
+  background-color: #bee0d5;
   background-image: url("/index/landing-desktop.webp");
   background-size: cover;
   background-position: left top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  height: 700px;
   height: 100vh;
+  height: 100svh;
+  width: 100%;
+}
+
+.skyImage {
+  background-color: #bee0d5;
+  background-image: url("/index/skyBg.png");
+  background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
+  height: 300px;
+  height: 50vh;
+  height: 50svh;
+  width: 100%;
+}
+
+.emptySpace {
+  background-color: #bee0d5;
+  height: 300px;
+  height: 50vh;
+  height: 50svh;
+  width: 100%;
+}
+
+.avionImage {
+  transform: translate(63%, -53%);
+}
+
+.promoImage {
+  transform: translate(-30%, 0);
+  width: 25rem;
+}
+
+.airplaneComponent {
+  align-items: center;
+  position: absolute;
+  left: -60%;
+  top: 105%;
+  display: flex;
+  flex-direction: column;
+}
+
+.avionAxis {
+  overflow: hidden;
+  background-color: #bee0d5;
+}
+
+.empty450Space {
+  height: 345vh;
+  width: 100%;
+}
+
+.waterImage {
+  background-color: #bee0d5;
+  background-image: url("/index/water.webp");
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 1400px;
+  height: 180vh;
+  height: 180svh;
+  width: 100%;
+}
+
+.footerImage {
+  background-color: #bee0d5;
+  background-image: url("/index/footer.webp");
+  background-size: cover;
+  background-position: 29% top;
+  background-repeat: no-repeat;
+  height: 1700px;
+  height: 220vh;
+  height: 220svh;
   width: 100%;
 }
 
@@ -153,6 +223,23 @@
 
 // mobile / less than 768px or 1:1 aspect ratio
 @media (max-width: 768px) {
+  .airplaneComponent {
+    top: 120%;
+    left: -74%;
+    width: 50%;
+  }
+  .footerImage {
+    background-color: #bee0d5;
+    background-image: url("/index/footer-mobile.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1700px;
+    height: 220vh;
+    height: 220svh;
+    width: 100%;
+  }
+
   .activeMenu {
     display: block;
   }
@@ -242,7 +329,9 @@
 
   .navBar {
     backdrop-filter: blur(10px);
+    height: 700px;
     height: 100vh;
+    height: 100svh;
     top: 0;
     width: 100%;
     position: fixed;
@@ -301,4 +390,34 @@
 #menu_label,
 .menuButton {
   display: none;
+}
+
+.textMarquee {
+  background-color: #bfe0d5;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-weight: bold;
+  color: rgb(48 48 48);
+  white-space: nowrap;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.test {
+  padding: 30px;
 }
