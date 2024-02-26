@@ -11,7 +11,10 @@ import cd1Png from '../public/index/CV1.png';
 import cd2Png from '../public/index/cd2.png';
 import balonPng from '../public/index/ballon_text.webp';
 import avionPng from '../public/index/avion.webp';
-import promoPng from '../public/index/promo.png';
+import promoPng1 from '../public/index/slide1.png';
+import promoPng2 from '../public/index/slide2.jpg';
+import promoPng3 from '../public/index/slide3.png';
+import promoPng4 from '../public/index/slide4.jpg';
 import containerPng from '../public/index/container.webp';
 
 import Header from '../components/Header';
@@ -22,6 +25,23 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { horizontalLoop } from '../util/_horizontalLoop';
 
 export default function Home() {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const images = [
+        promoPng1,
+        promoPng2,
+        promoPng3,
+        promoPng4,
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length);
+        }, 3000);
+
+        return () => clearInterval(timer);
+    }, [images.length]);
+
     const [isMenuChecked, setIsMenuChecked] = useState(false);
 
     const handleCheckboxChange = () => {
@@ -45,7 +65,7 @@ export default function Home() {
         gsap.to(airplaneRef.current, {
             x: '200vw',
             y: '30vh',
-            duration: 13,
+            duration: 30,
             ease: 'none',
             repeat: -1
         });
@@ -59,16 +79,16 @@ export default function Home() {
     }, []);
 
     const items = [
-        'Digital Manuals',
-        'Fun Mathematics',
-        'Educational Software',
-        'Financial Education',
-        'Interactive Alphabet',
-        'Digital Manuals',
-        'Fun Mathematics',
-        'Educational Software',
-        'Financial Education',
-        'Interactive Alphabet'
+        "Manuale digitale",
+        "Matematică distractivă",
+        "Software educațional",
+        "Educație financiară",
+        "Alfabet interactiv",
+        "Manuale digitale",
+        "Fun Mathematics",
+        "Software educațional",
+        "Educație financiară",
+        "Alfabet interactiv"
     ];
 
     return (
@@ -143,7 +163,7 @@ export default function Home() {
                     <div ref={airplaneRef} className={styles.airplaneComponent}>
                         <Image
                             className={styles.promoImage}
-                            src={promoPng}
+                            src={images[currentImageIndex]}
                         />
                         <Image
                             className={styles.avionImage}
@@ -155,12 +175,18 @@ export default function Home() {
                 <div className={styles.waterImage}>
                     <div className={animation.floatInWaterEffect}>
                         <Image
+                            className={`${styles.nonSelectable} ${styles.waterContainerImage}`}
                             src={containerPng}
                         />
+                        <p className={styles.review}>"Toate progresele, performantele care fac din fiul meu un campion se realizeaza si datorita programelor educationale pe care dvs ni le puneti la dispozitie." </p>
+                        <p className={styles.reviewAuthor}>- Carmen Bogdan, părinte</p>
                     </div>
                 </div>
                 <div className={styles.footerImage}>
-
+                    <form className={styles.emailForm}>
+                        <input type="email" id="email" name="email"></input>
+                        <button id={styles.subscribe} type="submit">Abonează-te</button>
+                    </form>
                 </div>
             </main >
 

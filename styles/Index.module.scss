@@ -35,8 +35,69 @@
 }
 
 .promoImage {
-  transform: translate(-30%, 0);
+  transform: rotate(15deg) translate(-30%, 0);
   width: 25rem;
+}
+
+.emailForm {
+  position: relative;
+  top: 33%;
+  height: 7%;
+  width: 100%;
+  input,
+  #subscribe {
+    position: relative;
+    left: 19.5%;
+    width: 20%;
+    height: 50%;
+    border-radius: 50px;
+    background-color: #e2ce9b;
+    border: rgb(60, 60, 60) 1px solid;
+  }
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #e2ce9b;
+  }
+  #subscribe {
+    position: relative;
+    left: 20%;
+    cursor: pointer;
+    width: 10%;
+  }
+  #subscribe:hover {
+    background-color: #ffdc8a;
+  }
+}
+
+.review {
+  position: fixed;
+  top: 17%;
+  color: #333;
+  min-width: 250px;
+  max-height: 47%;
+  width: 31%;
+  font-size: calc(0.9vw + 7px);
+  overflow: auto;
+  word-wrap: break-word;
+}
+
+.reviewAuthor {
+  position: fixed;
+  top: 17%;
+  max-height: 47%;
+  width: max-content;
+  font-size: calc(0.9vw + 7px);
+  overflow: auto;
+  word-wrap: break-word;
+  text-align: right;
+  right: 33%;
+  top: 54%;
+  background-color: #e8e4e7;
+}
+
+.waterContainerImage {
+  width: 50%;
+  min-width: 400px;
 }
 
 .airplaneComponent {
@@ -416,6 +477,11 @@
   white-space: nowrap;
   font-size: 2rem;
   cursor: pointer;
+}
+
+.box:hover {
+  cursor: pointer;
+  color: #216e4b;
 }
 
 .test {
