@@ -63,11 +63,12 @@ export default function Home() {
 
         // gsap animation for the airplane make it move from left to right of the screen
         gsap.to(airplaneRef.current, {
-            x: '200vw',
+            x: '10vw',
             y: '30vh',
             duration: 30,
             ease: 'none',
-            repeat: -1
+            repeat: -1,
+            yoyo: true
         });
 
         loop.play();
@@ -92,7 +93,7 @@ export default function Home() {
     ];
 
     return (
-        <div>
+        <div style={{ overflowX: 'hidden' }}>
             <Head>
                 <meta
                     name="title"
@@ -184,7 +185,7 @@ export default function Home() {
                 </div>
                 <div className={styles.footerImage}>
                     <form className={styles.emailForm}>
-                        <input type="email" id="email" name="email"></input>
+                        <input type="email" id={styles.email} name="email"></input>
                         <button id={styles.subscribe} type="submit">Abonează-te</button>
                     </form>
                 </div>
