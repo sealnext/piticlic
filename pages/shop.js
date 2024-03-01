@@ -12,9 +12,9 @@ export default function shop() {
     return (
 
         <div style={{ backgroundImage: 'url("/kids.webp")' }} class="flex justify-center items-center min-h-[105vh] flex-wrap bg-teal-100">
-            <div className="backdrop-blur-md h-[100%] flex justify-center items-center inter-var w-full md:w-1/2 lg:w-[23%] my-2 border rounded-3xl h-[27rem]">
+            <a href="/shop/products?filter=piticlic" className="backdrop-blur-md h-[100%] flex justify-center items-center inter-var w-full md:w-1/2 lg:w-[23%] my-2 border rounded-3xl h-[27rem]">
                 <CardContainer className="inter-var">
-                    <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] w-auto sm:w-[sm:w-[33vw]] h-auto rounded-xl p-6">
+                    <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] w-auto sm:w-[sm:w-[33vw]] h-auto rounded-xl ">
                         <CardItem
                             translateZ="50"
                             className="invert text-xl font-bold text-neutral-600 text-white"
@@ -39,10 +39,10 @@ export default function shop() {
                         </CardItem>
                     </CardBody>
                 </CardContainer>
-            </div>
+            </a>
             <div className="backdrop-blur-md h-[100%] flex justify-center items-center inter-var w-full md:w-1/2 lg:w-[23%] border rounded-3xl h-[27rem] mx-4">
                 <CardContainer className="inter-var">
-                    <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] w-auto sm:w-[sm:w-[33vw]] h-auto rounded-xl p-6">
+                    <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] w-auto sm:w-[sm:w-[33vw]] h-auto rounded-xl ">
                         <CardItem
                             translateZ="50"
                             className="invert text-xl font-bold text-neutral-600 text-white"
@@ -77,7 +77,7 @@ export default function shop() {
             </div>
             <div className="backdrop-blur-md h-[100%] flex justify-center items-center inter-var w-full md:w-1/2 lg:w-[23%] border rounded-3xl h-[27rem] mr-4">
                 <CardContainer className="inter-var">
-                    <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] w-auto sm:w-[sm:w-[33vw]] h-auto rounded-xl p-6">
+                    <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] w-auto sm:w-[sm:w-[33vw]] h-auto rounded-xl ">
                         <CardItem
                             translateZ="50"
                             className="invert text-xl font-bold text-neutral-600 text-white"
@@ -108,7 +108,7 @@ export default function shop() {
             </div>
             <div className="backdrop-blur-md h-[100%] flex justify-center items-center inter-var w-full md:w-1/2 lg:w-[23%] border rounded-3xl h-[27rem]">
                 <CardContainer className="inter-var">
-                    <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] w-auto sm:w-[sm:w-[33vw]] h-auto rounded-xl p-6">
+                    <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] w-auto sm:w-[sm:w-[33vw]] h-auto rounded-xl ">
                         <CardItem
                             translateZ="50"
                             className="invert text-xl font-bold text-neutral-600 text-white"
