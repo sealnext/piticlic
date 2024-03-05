@@ -1,0 +1,41 @@
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: solid 2px rgb(185, 184, 184);
+  padding: 16px;
+}
+
+.searchInput {
+  flex: 1;
+  margin-right: 8px;
+  max-width: 400px;
+}
+
+.searchInput input {
+  width: 100%;
+  background-color: transparent;
+  padding: 8px;
+  outline: none;
+}
+
+.ageDropdown {
+  border-left: 1px solid hsl(0, 1%, 72%);
+
+  margin-right: 8px;
+  background-color: transparent;
+}
+
+.ageDropdown select {
+  padding: 8px;
+
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .searchContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+}
