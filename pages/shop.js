@@ -10,9 +10,8 @@ import shop1 from '../public/shop/shop1.png';
 
 export default function shop() {
     return (
-
-        <div style={{ backgroundImage: 'url("/kids.webp")' }} class="flex justify-center items-center min-h-[105vh] flex-wrap bg-teal-100">
-            <a href="/shop/products?filter=piticlic" className="backdrop-blur-md h-[100%] flex justify-center items-center inter-var w-full md:w-1/2 lg:w-[23%] my-2 border rounded-3xl h-[27rem]">
+        <div style={{ backgroundImage: 'url("/kids.webp")', backgroundSize: 'cover' }} class="flex justify-center items-center min-h-[105vh] flex-wrap bg-teal-100">
+            <a href="/shop/products?filter=piticlic" className="backdrop-blur-md h-[100%] flex justify-center items-center inter-var w-full md:w-1/2 lg:w-[23%] my-2 border rounded-3xl h-[75vh]">
                 <CardContainer className="inter-var">
                     <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] w-auto sm:w-[sm:w-[33vw]] h-auto rounded-xl ">
                         <CardItem
@@ -40,7 +39,7 @@ export default function shop() {
                     </CardBody>
                 </CardContainer>
             </a>
-            <div className="backdrop-blur-md h-[100%] flex justify-center items-center inter-var w-full md:w-1/2 lg:w-[23%] border rounded-3xl h-[27rem] mx-4">
+            <a href="/shop/products?filter=piticlic" className="backdrop-blur-md h-[100%] flex justify-center items-center inter-var w-full md:w-1/2 lg:w-[23%] border rounded-3xl h-[75vh] mx-4">
                 <CardContainer className="inter-var">
                     <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] w-auto sm:w-[sm:w-[33vw]] h-auto rounded-xl ">
                         <CardItem
@@ -74,8 +73,8 @@ export default function shop() {
                         </div>
                     </CardBody>
                 </CardContainer>
-            </div>
-            <div className="backdrop-blur-md h-[100%] flex justify-center items-center inter-var w-full md:w-1/2 lg:w-[23%] border rounded-3xl h-[27rem] mr-4">
+            </a>
+            <a href="/shop/products?filter=piticlic" className="backdrop-blur-md h-[100%] flex justify-center items-center inter-var w-full md:w-1/2 lg:w-[23%] border rounded-3xl h-[75vh] mr-4">
                 <CardContainer className="inter-var">
                     <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] w-auto sm:w-[sm:w-[33vw]] h-auto rounded-xl ">
                         <CardItem
@@ -105,8 +104,8 @@ export default function shop() {
                         </div>
                     </CardBody>
                 </CardContainer>
-            </div>
-            <div className="backdrop-blur-md h-[100%] flex justify-center items-center inter-var w-full md:w-1/2 lg:w-[23%] border rounded-3xl h-[27rem]">
+            </a>
+            <a href="/shop/products?filter=piticlic" className="backdrop-blur-md h-[100%] flex justify-center items-center inter-var w-full md:w-1/2 lg:w-[23%] border rounded-3xl h-[75vh]">
                 <CardContainer className="inter-var">
                     <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] w-auto sm:w-[sm:w-[33vw]] h-auto rounded-xl ">
                         <CardItem
@@ -136,7 +135,7 @@ export default function shop() {
                         </div>
                     </CardBody>
                 </CardContainer>
-            </div>
+            </a>
         </div>
     );
 }
