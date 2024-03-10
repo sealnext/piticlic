@@ -64,6 +64,7 @@ export default function login() {
                 <input
                     className={styles.input}
                     type="text"
+                    placeholder='mail@exemplu.com'
                     value={email}
                     onChange={(e) => {
                         setEmail(e.target.value);
@@ -74,7 +75,7 @@ export default function login() {
                 {errors.email && <div className={styles.errorMessage}>{errors.email}</div>}
                 <div className={styles.flex}>
                     <p className={styles.text}>Parola</p>
-                    <a className={`${styles.text} ${styles.link}`}>Ai uitat parola?</a>
+                    <a href='/resetpassword' className={`${styles.text} ${styles.link}`}>Ai uitat parola?</a>
                 </div>
                 <input
                     className={styles.input}
