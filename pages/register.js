@@ -83,6 +83,7 @@ export default function register() {
                 <input
                     className={styles.input}
                     type="text"
+                    placeholder='mail@exemplu.com'
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
