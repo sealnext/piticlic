@@ -93,7 +93,7 @@ export default function Home() {
     ];
 
     return (
-        <div style={{ overflowX: 'hidden' }}>
+        <div style={{ overflowX: 'hidden', backgroundColor: '#b4c1ac' }}>
             <Head>
                 <meta
                     name="title"
