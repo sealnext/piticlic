@@ -5,18 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (max-width: 768px) {
-  body {
-    background-color: #b4c1ac;
-  }
-}
-
-@media (min-width: 769px) {
-  body {
-    background-color: #536B5A;
-  }
-}
-
 html,
 body {
   overscroll-behavior-y: none;
