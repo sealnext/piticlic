@@ -4,67 +4,87 @@ import { HeaderShop } from "@/components/ui/header-shop"
 
 export default function cart() {
     return (
-        <div key="1" className="h-[100vh] bg-white rounded-lg shadow-lg p-8">
-            <HeaderShop />
-            <div className="flex flex-col lg:flex-row gap-8 mt-8">
-                <div className="flex-1">
-                    <div className="flex items-center justify-between mb-6">
-                        <h2 className="text-xl font-semibold">Cart</h2>
-                        <div className="flex space-x-2">
-                            <TruckIcon className="text-gray-500 h-6 w-6" />
-                            <span className="text-sm text-gray-500">Express</span>
-                            <CreditCardIcon className="text-gray-500 h-6 w-6" />
-                            <span className="text-sm text-gray-500">Payment</span>
-                        </div>
-                    </div>
-                    <ItemShop
-                        image="http://www.piticlic.ro/components/com_jshopping/files/img_products/P298_0.png"
-                        title="Cute worm baby toys"
-                        price={45.20}
-                        description="Express delivery in 3 days"
-                        category="1-2 yr"
-                    />
-                </div>
-                <div className="w-full lg:w-96">
-                    <div className="mb-6">
-                        <div className="mb-6">
-                            <h3 className="text-lg font-semibold">Cupoane</h3>
-                            <div className="flex items-center justify-between bg-gray-100 rounded-lg p-4">
-                                <div className="flex items-center">
-                                    <input
-                                        className="w-full border border-gray-300 rounded-md px-2 py-1 focus:outline-none focus:ring focus:ring-gray-400 dark:border-gray-700 dark:focus:ring-gray-600"
-                                        placeholder="Introduceți cuponul"
-                                        type="text"
-                                    />
-                                    <Button className="ml-2" variant="ghost">
-                                        Aplică
-                                    </Button>
+        <div className="flex flex-col items-center w-screen">
+            <div className="max-w-screen-xl">
+                <HeaderShop />
+                <div key="1" className="h-[100%] bg-white rounded-lg p-8">
+                    <div className="flex flex-col lg:flex-row gap-8 mt-8">
+                        <div className="flex-1">
+                            <div className="flex items-center justify-between mb-6">
+                                <h1 className="text-xl font-semibold">Cart</h1>
+                                <div className="flex space-x-2">
+                                    <TruckIcon className="text-gray-500 h-6 w-6" />
+                                    <span className="text-sm text-gray-500">Express</span>
+                                    <CreditCardIcon className="text-gray-500 h-6 w-6" />
+                                    <span className="text-sm text-gray-500">Payment</span>
                                 </div>
                             </div>
+                            <ItemShop
+                                image="http://www.piticlic.ro/components/com_jshopping/files/img_products/P298_0.png"
+                                title="Cute worm baby toys"
+                                price={45.20}
+                                description="Express delivery in 3 days"
+                                category="1-2 yr"
+                            />
+                        </div>
+                        <div>
+                            <div className="max-w-md mr-auto md:order-1">
+                                <h1 className="text-lg font-semibold mb-4">Select a delivery address</h1>
+                                <div className="space-y-2">
+                                    <div className="flex items-center space-x-2">
+                                        <input checked className="radio radio-primary" id="address1" name="delivery-address" type="radio" />
+                                        <label className="flex-1 p-4 bg-gray-100 rounded-lg" htmlFor="address1">
+                                            <p className="font-medium">Lydia George</p>
+                                            <p className="text-sm text-gray-600">23475 Glacier View Dr, Eagle River, Alaska 99577, USA</p>
+                                        </label>
+                                    </div>
+                                    <div className="flex items-center space-x-2">
+                                        <input className="radio radio-primary" id="address2" name="delivery-address" type="radio" />
+                                        <label className="flex-1 p-4 bg-gray-100 rounded-lg" htmlFor="address2">
+                                            <p className="font-medium">George Clooney</p>
+                                            <p className="text-sm text-gray-600">3448 Ile De France St #242, Fort Wainwright, Alaska 99703, USA</p>
+                                        </label>
+                                    </div>
+                                </div>
+                                <h1 className="text-lg font-semibold my-4">Choose Payment Method</h1>
+                                <div className="space-y-2">
+                                    <div className="flex mb-12 items-center space-x-2">
+                                        <input className="radio radio-primary" id="payment2" name="payment-method" type="radio" />
+                                        <label className="flex-1 p-4 bg-gray-100 rounded-lg" htmlFor="payment2">
+                                            <div className="flex justify-between items-center">
+                                                <p className="font-medium">Debit/Credit Card</p>
+                                                <CreditCardIcon className="w-6 h-6 text-green-500" />
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="w-full lg:w-96">
+                                <div className="mb-6">
+                                    <h3 className="text-lg font-semibold mb-2">Detalii preț</h3>
+                                    <div className="space-y-2">
+                                        <div className="flex justify-between">
+                                            <span>1 articol</span>
+                                            <span>45,20 RON</span>
+                                        </div>
+                                        <div className="flex justify-between">
+                                            <span>Reducere cupon</span>
+                                            <span className="text-green-500">-2,50 RON</span>
+                                        </div>
+                                        <div className="flex justify-between">
+                                            <span>Costuri livrare</span>
+                                            <span className="text-green-500">Livrare gratuită</span>
+                                        </div>
+                                        <div className="flex justify-between font-semibold">
+                                            <span>Total de plată</span>
+                                            <span>67,09 RON</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <Button className="w-full">Finalizează comanda</Button>
+                            </div>
                         </div>
                     </div>
-                    <div className="mb-6">
-                        <h3 className="text-lg font-semibold mb-2">Detalii preț</h3>
-                        <div className="space-y-2">
-                            <div className="flex justify-between">
-                                <span>1 articol</span>
-                                <span>45,20 RON</span>
-                            </div>
-                            <div className="flex justify-between">
-                                <span>Reducere cupon</span>
-                                <span className="text-green-500">-2,50 RON</span>
-                            </div>
-                            <div className="flex justify-between">
-                                <span>Costuri livrare</span>
-                                <span className="text-green-500">Livrare gratuită</span>
-                            </div>
-                            <div className="flex justify-between font-semibold">
-                                <span>Total de plată</span>
-                                <span>67,09 RON</span>
-                            </div>
-                        </div>
-                    </div>
-                    <Button className="w-full">Finalizează comanda</Button>
                 </div>
             </div>
         </div>
