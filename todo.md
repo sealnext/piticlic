@@ -1,0 +1,2 @@
+
+- nu pe fiecare pagina arata headerul (components/header-shop.js) la fel, de exemplu pe cart e mai ingust iar pe product e mai larg, ar trebui setat o dimensiune dupa ecran dar sa aiba max width in continuare max-w-screen-lg(momentan e pus pe pagina insine nu pe APP sau pe altceva.. not the best )

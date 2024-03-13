@@ -4,8 +4,11 @@ import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import ProfilePopOut from "./my-profile";
 import { useState, useRef } from "react";
 import styles from "@/styles/animations.module.scss";
+import { useRouter } from "next/router";
 
 export function HeaderShop({ }) {
+    const router = useRouter();
+
     const [isPopOutVisible, setIsPopOutVisible] = useState(false);
     const timeoutRef = useRef(null);
 
@@ -31,13 +34,13 @@ export function HeaderShop({ }) {
             </div>
             <div className="flex items-center space-x-4">
                 <SearchIcon className="text-gray-500 h-6 w-6" />
-                <ShoppingCartIcon className="text-gray-500 h-6 w-6" />
+                <ShoppingCartIcon onClick={() => router.push('/cart')} className="cursor-pointer text-gray-500 h-6 w-6" />
                 <div
                     className="relative"
                     onMouseEnter={showPopOut}
                     onMouseLeave={hidePopOut}
                 >
-                    <Avatar>
+                    <Avatar className='cursor-pointer'>
                         <AvatarImage alt="User avatar" src="/placeholder.svg?height=32&width=32" />
                         <AvatarFallback></AvatarFallback>
                     </Avatar>
