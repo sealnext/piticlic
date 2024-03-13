@@ -1,11 +1,11 @@
-import { ItemShop } from './../components/ui/item-shop';
+import { ItemShop } from '../components/item-shop';
 import { Button } from "@/components/ui/button"
-import { HeaderShop } from "@/components/ui/header-shop"
+import { HeaderShop } from "@/components/header-shop"
 
 export default function cart() {
     return (
         <div className="flex flex-col items-center w-screen">
-            <div className="max-w-screen-xl">
+            <div className="max-w-screen-lg">
                 <HeaderShop />
                 <div key="1" className="h-[100%] bg-white rounded-lg p-8">
                     <div className="flex flex-col lg:flex-row gap-8 mt-8">
@@ -32,7 +32,7 @@ export default function cart() {
                                 <h1 className="text-lg font-semibold mb-4">Select a delivery address</h1>
                                 <div className="space-y-2">
                                     <div className="flex items-center space-x-2">
-                                        <input checked className="radio radio-primary" id="address1" name="delivery-address" type="radio" />
+                                        <input className="radio radio-primary" id="address1" name="delivery-address" type="radio" />
                                         <label className="flex-1 p-4 bg-gray-100 rounded-lg" htmlFor="address1">
                                             <p className="font-medium">Lydia George</p>
                                             <p className="text-sm text-gray-600">23475 Glacier View Dr, Eagle River, Alaska 99577, USA</p>

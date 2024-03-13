@@ -1,14 +1,14 @@
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { HeaderShop } from "@/components/ui/header-shop"
+import { HeaderShop } from "@/components/header-shop"
 import { Input } from "@/components/ui/input"
 
 export default function product() {
     return (
         // max witdh 1200px
         <div className="flex flex-col items-center w-screen">
-            <div className="max-w-screen-xl">
+            <div className="max-w-screen-lg">
                 <HeaderShop />
                 <div className="max-w-7xl mx-auto py-12 px-4 sm:pl-6 sm:pr-16 lg:pr-12">
                     <nav className="mb-8">
@@ -137,10 +137,6 @@ export default function product() {
                                     <p className="text-zinc-500">🚚 100% Original Products</p>
                                     <p className="text-zinc-500">💳 Pay on delivery might be available</p>
                                     <p className="text-zinc-500">🔄 Easy 30 days returns</p>
-                                </div>
-                                <div className="mt-4">
-                                    <Input placeholder="Enter Pincode" />
-                                    <ChevronRightIcon className="w-5 h-5 absolute inset-y-0 right-0 mr-3" />
                                 </div>
                             </div>
                             <div className="mt-8">

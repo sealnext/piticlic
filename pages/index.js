@@ -17,7 +17,7 @@ import promoPng3 from '../public/index/slide3.png';
 import promoPng4 from '../public/index/slide4.jpg';
 import containerPng from '../public/index/container.webp';
 
-import Header from '../components/Header';
+import Header from '../components/header-landing';
 
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
