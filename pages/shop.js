@@ -10,7 +10,7 @@ import shop1 from '../public/shop/shop1.png';
 
 export default function shop() {
     return (
-        <div style={{ backgroundImage: 'url("/kids.webp")', backgroundSize: 'cover' }} class="flex justify-center items-center min-h-[105vh] flex-wrap bg-teal-100">
+        <div style={{ backgroundImage: 'url("/kids.webp")', backgroundSize: 'cover' }} className="flex justify-center items-center min-h-[105vh] flex-wrap bg-teal-100">
             <a href="/shop/products?filter=piticlic" className="backdrop-blur-md h-[100%] flex justify-center items-center inter-var w-full md:w-1/2 lg:w-[23%] my-2 border rounded-3xl h-[75vh]">
                 <CardContainer className="inter-var">
                     <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] w-auto sm:w-[sm:w-[33vw]] h-auto rounded-xl ">
@@ -32,7 +32,7 @@ export default function shop() {
                                 src={shop4}
                                 height="200"
                                 width="200"
-                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                className="h-60 w-full rounded-xl group-hover/card:shadow-xl"
                                 alt="thumbnail"
                             />
                         </CardItem>
@@ -64,7 +64,7 @@ export default function shop() {
                                 src={shop3}
                                 height="200"
                                 width="200"
-                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                className="h-60 w-full  rounded-xl group-hover/card:shadow-xl"
                                 alt="thumbnail"
                             />
                         </CardItem>
@@ -95,7 +95,7 @@ export default function shop() {
                                 src={shop5}
                                 height="200"
                                 width="200"
-                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                className="h-60 w-full  rounded-xl group-hover/card:shadow-xl"
                                 alt="thumbnail"
                             />
                         </CardItem>
@@ -126,7 +126,7 @@ export default function shop() {
                                 src={shop1}
                                 height="200"
                                 width="200"
-                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                className="h-60 w-full  rounded-xl group-hover/card:shadow-xl"
                                 alt="thumbnail"
                             />
                         </CardItem>
