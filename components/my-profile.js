@@ -14,15 +14,15 @@ export default function myProfile() {
                     <div className="mb-4 text-sm font-medium">mail@example.com</div>
                     <div className="space-y-2">
                         <hr></hr>
-                        <a className="flex items-center space-x-2 text-sm font-medium text-gray-700 hover:text-gray-900" href="#">
+                        <a onClick={() => router.push('/profile')} className="flex items-center space-x-2 text-sm font-medium text-gray-700 hover:text-gray-900" href="#">
                             <UserIcon className="h-4 w-4" />
                             <span>Profilul meu</span>
                         </a>
-                        <a className="flex items-center space-x-2 text-sm font-medium text-gray-700 hover:text-gray-900" href="#">
+                        <a onClick={() => router.push('/orders')} className="flex items-center space-x-2 text-sm font-medium text-gray-700 hover:text-gray-900" href="#">
                             <CreditCardIcon className="h-4 w-4" />
                             <span>Achizițiile mele</span>
                         </a>
-                        <a className="flex items-center space-x-2 text-sm font-medium text-gray-700 hover:text-gray-900" href="#">
+                        <a onClick={() => router.push('/favorites')} className="flex items-center space-x-2 text-sm font-medium text-gray-700 hover:text-gray-900" href="#">
                             <ArrowUpSquareIcon className="h-4 w-4" />
                             <span>Favorite</span>
                         </a>
