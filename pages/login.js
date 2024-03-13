@@ -2,8 +2,20 @@
 
 import styles from '../styles/Auth.module.scss';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useSession, signIn } from 'next-auth/react';
 
-export default function login() {
+export default function Login() {
+    const { data: session, status } = useSession();
+    const router = useRouter();
+
+    useEffect(() => {
+        console.log('Status:', status);
+        if (status === 'authenticated') {
+            router.push('/shop');
+        }
+    }, [status, router]);
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState({});
@@ -36,14 +48,31 @@ export default function login() {
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         clearTimeout(timer);
+
         if (validateOnSubmit()) {
-            // Logică de trimitere formular
+            console.log("tests passed. Logging in...");
+            try {
+                console.log('Email:', email);
+                const result = await signIn('credentials', {
+                    email,
+                    password,
+                    redirect: false,
+                });
+                console.log('Result:', result);
+                if (result.ok) {
+                    router.replace('/shop');
+                } else {
+                    setErrors({ server: 'Email sau parolă invalidă.' });
+                }
+            } catch (error) {
+                console.error('Eroare la autentificare:', error);
+                setErrors({ server: 'A apărut o eroare la autentificare.' });
+            }
         }
     };
-
 
     useEffect(() => {
         const newTimer = setTimeout(() => {
@@ -55,8 +84,9 @@ export default function login() {
         return () => clearTimeout(newTimer);
     }, [email, password]);
 
-
-    return (
+    if (status === 'loading') {
+        return <div>Loading...</div>;
+    } else return (
         <div className={styles.background}>
             <div className={styles.container}>
                 <h2 className={styles.title}>Logheaza-te</h2>
@@ -68,7 +98,7 @@ export default function login() {
                     value={email}
                     onChange={(e) => {
                         setEmail(e.target.value);
-                        setErrors(prevErrors => ({ ...prevErrors, email: '' }));
+                        setErrors(prevErrors => ({ ...prevErrors, email: '', server: '' }));
                         clearTimeout(timer);
                     }}
                 />
@@ -83,15 +113,15 @@ export default function login() {
                     value={password}
                     onChange={(e) => {
                         setPassword(e.target.value);
-                        setErrors(prevErrors => ({ ...prevErrors, password: '' }));
+                        setErrors(prevErrors => ({ ...prevErrors, password: '', server: '' }));
                         clearTimeout(timer);
                     }}
                 />
                 {errors.password && <div className={styles.errorMessage}>{errors.password}</div>}
+                {errors.server && <div className={styles.errorMessage}>{errors.server}</div>}
                 <button
                     className={styles.loginButton}
                     onClick={handleSubmit}
-                    disabled={Object.keys(errors).length > 0}
                 >
                     Logheazǎ-te
                 </button>
@@ -101,6 +131,6 @@ export default function login() {
                     <a href='/register' className={styles.signUpButton}>Înregistreazǎ-te</a>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
